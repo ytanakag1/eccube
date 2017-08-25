@@ -1,0 +1,2322 @@
+﻿@charset "utf-8";
+
+	div{
+		display:				block;
+	}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+body
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	body  {
+		margin:					0;
+		padding:				0;
+/*
+		font-family:			"メイリオ" , Meiryo , Osaka ,
+								"ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" ,
+								"ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+/**/
+		line-height:			1.5;
+		color:					#111;
+		word-wrap:				normal;
+	}
+@media (min-width:	992px) 							{body{	font-size:14.0px;}	}
+@media (min-width:	768px) and (max-width:	991px)	{body{	font-size:14.0px;}	}
+@media (min-width:	640px) and (max-width:	767px)	{body{	font-size:14.0px;}	}
+@media (max-width:	639px)							{body{	font-size:14.0px;}	}
+
+	@media only screen and (min-width:	992px) {
+		div.wrapPC , .forPC{	display:		block !important;	}
+		div.wrapPT , .forPT{	display:		block !important;	}
+		div.wrapTS , .forTS{	display:		none !important;	}
+		div.wrapSP , .forSP{	display:		none !important;	}
+	}
+	@media only screen and (max-width:	991px) {
+		div.wrapPC , .forPC{	display:		none !important;	}
+		div.wrapPT , .forPT{	display:		block !important;	}
+		div.wrapTS , .forTS{	display:		block !important;	}
+		div.wrapSP , .forSP{	display:		none !important;	}
+	}
+	@media only screen and (max-width:	767px) {
+		div.wrapPC , .forPC{	display:		none !important;	}
+		div.wrapPT , .forPT{	display:		none !important;	}
+		div.wrapTS , .forTS{	display:		block !important;	}
+		div.wrapSP , .forSP{	display:		block !important;	}
+	}
+
+
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+position
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	@media only screen and (min-width:	992px)	{
+		.left {			float:	left;}
+		.right {		float:	right;}
+		.anytime_left {	float:	left;}
+		.anytime_right {float:	right;}
+
+	}
+	@media only screen and (max-width:	991px)	{
+		.left ,	.right{
+			margin-left:		auto;
+			margin-right:		auto;
+		}
+		.anytime_left {	float:	left;}
+		.anytime_right {float:	right;}
+	}
+
+	.obj_left{
+		display:				block;
+		margin-right:			auto;
+		margin-left:			0;
+	}
+	.obj_right{
+		display:				block;
+		margin-right:			0px;
+		margin-left:			auto;
+	}
+	.obj_center{
+		display:				block;
+		margin-left:			auto !important;
+		margin-right:			auto !important;
+	}
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+clear
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	.clear {    				clear:      			both; }
+	.clearfix {  				min-height: 			1px;}
+	.clearfix:after {
+		content: 				"";
+		display: 				block;
+		clear: 					both;
+	}
+	br.clear ,
+	hr.clear {
+		clear:					both;
+		display:				none;
+	}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+<h>
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	h1 , h2 , h3 , h4 ,h5 , h6 {
+		word-break:				break-all;
+	}
+	h1{
+		display:				inline-block;
+	}
+	h2 , h3 , h4 ,h5 , h6 {
+		display:				block;
+	}
+
+	h1{font-size:	12px;	line-height:	1;	font-weight:normal;}
+	h2{font-size:	1.3em;	line-height:	1;	font-weight:normal;}
+	h3{font-size:	1.3em;	line-height:	1;	}
+	h4{font-size:	1.2em;	line-height:	1;	}
+	h5{font-size:	1em;	line-height:	1;	}
+	h6{font-size:	1em;	line-height:	1;	}
+
+	
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+フォント
+■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+	.fntXXS	{	font-size:	0.75em !important;	}
+	.fntXS 	{	font-size:	0.88em !important;	}
+	.fntS  	{	font-size:	0.96em !important;	}
+	.fntM	{	font-size:	1.0em !important;	}
+	.fntL	{	font-size:	1.20em !important;	}
+	.fntXL	{	font-size:	1.50em !important;	}
+	.fntXXL	{	font-size:	2.00em !important;	}
+	.fntXXXL{	font-size:	3.00em !important;	}
+
+	.textcenter{text-align:	center !important;	}
+	.textright {text-align:	right !important;	}
+	.textleft  {text-align:	left !important;	}
+	.bold{		font-weight:bold !important;	}
+	.normal{	font-weight:normal !important;	}
+
+	.textUL{text-decoration:underline;	}
+
+	.shadow ,
+	.textshadow{	text-shadow:	1px 0px 0px #111;	}
+	.clearshadow{	text-shadow:	0 !important;	}
+
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+<p>
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	p{
+		display:				block;
+		margin:					0;
+		padding:				0 0 15px 0;
+		word-break:				break-all;
+	}
+	p.nopad{
+		padding:				0 0 0 0 !important;
+	}
+
+	p.underline{
+		border-bottom:			1px dotted #ccc;
+		padding:				0;
+	}
+
+	p:after {
+		content: 				"";
+		display: 				block;
+		clear: 					both;
+	}
+	p.wp-caption-text{
+		display:				block;
+		padding-right:			10px;
+		padding-top:			5px;
+		padding-bottom:			10px;
+		font-size:				1em;
+		line-height:			1.2;
+	}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+画像 img
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	img{
+		display:				block;
+		margin:					0;
+		padding:				0;
+		max-width: 				100%;
+		height: 				auto;
+		width:					auto;
+	}
+	img.resizeimg ,
+	p.resizeimg img	,
+	div.resizeimg img {
+		width:					100%;
+		height:					auto;
+	}
+	img.imgleft ,
+	.alignleft{
+		float:					left;
+		margin-right:			20px;
+		margin-bottom:			10px;
+	}
+
+	img.imgright ,
+	.alignright{
+		float:					right;
+		margin-left:			20px;
+		margin-bottom:			10px;
+	}
+
+	img.imgright ,
+	img.imgleft {
+		display:				block;
+		width:					-webkit-calc(50% - 20px);
+		width:					calc(50% - 20px);
+		height:					auto;
+	}
+	img.imgcenter ,
+	.aligncenter{
+		display:				block;
+		margin: 				0 auto 10px auto;
+	}
+	.alignnone{					display:				block;
+		margin-bottom:			10px;
+	}
+	a img  {					border:					none;
+		background:				none;
+	}
+	a img:hover{				opacity:				0.8;
+		filter:					alpha(opacity=80);
+		-ms-filter:				"alpha( opacity=80 )";
+		background:				none;
+	}
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+wrap/container
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	.wrap ,
+	#wrap ,
+	#wrap_head	,
+	#wrap_navi ,
+	#wrap_desc ,
+	#wrap_copy	,
+	#wrap_object ,
+	.wrap_object ,
+	#wrap_title , 
+	#wrap_inner	,
+	#wrap_footer ,
+	#line_footer ,
+	#wrap_bottom {
+		display:				block;
+		word-break:				break-all;
+		width:					100%;
+	}
+
+	#wrap_inner	{
+		padding-bottom:			30px;
+	}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+inner
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	.inner ,
+	#inner ,
+	#inner_head ,
+	#inner_desc ,
+	#inner_title {
+		display:				block;
+		margin-left:			auto;
+		margin-right:			auto;
+		padding:				0;
+		width:					98%;
+		max-width:				991px;
+		word-break:				break-all;
+	}
+
+	#inner_footer ,
+	#inner_bottom {
+		display:				block;
+		margin-left:			auto;
+		margin-right:			auto;
+		padding:				0;
+		width:					100%;
+		max-width:				991px;
+		word-break:				break-all;
+	}
+
+	#inner_object ,
+	.inner_object ,
+	#inner_copy {
+		display:				block;
+		margin-left:			auto;
+		margin-right:			auto;
+		padding:				0;
+		width:					100%;
+		word-break:				break-all;
+	}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+main-side
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	#inner_main ,
+	#inner_side ,
+	#inner_left ,
+	#inner_right {
+		display:				block;
+		word-break:				break-all;
+		padding:				0 !important;
+		margin-bottom:			10px;
+	}
+
+	@media (min-width: 992px) {
+		#inner_side	{	width:	240px;		}
+		#inner_main	{	width:	720px;		}
+		#inner_right{	width:	360px;float:	right;}
+		#inner_left	{	width:	660px;float:	left;}
+
+	}
+	@media only screen and (max-width: 991px) {
+		#inner_side	,
+		#inner_main	,
+		#inner_right ,
+		#inner_left	{
+			width:				720px;
+			margin-left:		auto;
+			margin-right:		auto;
+		}
+
+		#inner_side:after	,
+		#inner_main:after	,
+		#inner_right:after	,
+		#inner_left:after	{
+			content:				""; 
+			isplay:				block;
+			clear:				both;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.sidearea ,
+		#inner_main		,
+		#inner_side		,
+		#inner_right	,
+		#inner_left {
+			width:				98%;
+			margin-left:		auto;
+			margin-right:		auto;
+		}
+
+	}
+
+/*●●●●●●●●●●●●●●●●●●●●●●●●●●
+wrap clear
+●●●●●●●●●●●●●●●●●●●●●●●●●●●*/
+	.wrap:after ,
+	#wrap:after ,
+	#wrap_head:after ,
+	#wrap_navi:after ,
+	#wrap_desc:after ,
+	#wrap_copy:after ,
+	#wrap_title:after ,
+	#wrap_inner:after ,
+	#wrap_half:after ,
+	#wrap_footer:after ,
+	#wrap_bottom:after , 
+	#inner_head:after ,
+	#inner_navi:after ,
+	#inner_desc:after ,	#inner_copy:after ,
+	.inner:after ,
+	#inner:after ,
+	#inner:before ,
+	#inner_footer:after ,
+	#inner_bottom:after {
+		content:				""; 
+		display:				block;
+		clear:					both;
+	}
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■■
+blockRow/blockCol/blockHibrid
+■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+
+	/*	DIV */
+	.gallery ,
+	.blockCol ,
+	.blockRow {
+		display:				block;
+	}
+
+	/*	DIV ul */
+	ul.gallery ,
+	.blockRow ul , ul.blockRow {
+		position:				relative;
+		display:				flex;
+		list-style:				none;
+		background-color:		transparent;
+		padding:				0;
+		-webkit-flex-wrap: 		wrap; /* Safari */
+		flex-wrap:		 		wrap;
+		-webkit-align-content:	flex-start; /* Safari */
+		align-content:			flex-start;
+		-webkit-flex-direction:	row;
+		flex-direction:			row;
+	}
+	.blockCol ul , ul.blockCol{
+		display:				block;
+		list-style:				none;
+	}
+
+
+	/*	DIV ul li */
+	.blockCol ul li ,   ul.blockCol li ,
+	.blockRow ul li ,   ul.blockRow li {
+		position:				relative;
+		display:				block;
+		background-color:		transparent;
+		overflow:				hidden;
+		-webkit-transition: 	all 0.3s ease;
+		-moz-transition:		all 0.3s ease;
+		border:					0;
+	}
+
+	/*	blockRow */
+	ul.hw li , ul li.hw {width:	50%;	}
+	ul.hs li , ul li.hs {width: 46%;	margin-left: 2%; margin-right: 2%;	}
+
+	ul.w1 li , ul li.w1 {width:	100%;	}
+	ul.w2 li , ul li.w2 {width:	50%;	}
+
+	ul.w3 li , ul li.w3 {width:	33.333%;}
+	ul.w4 li , ul li.w4 {width:	25%;	}
+	ul.w5 li , ul li.w5 {width:	20%;	}
+	ul.w6 li , ul li.w6 {width:	16%;}
+	ul.w7 li , ul li.w7 {width:	14.285%;}
+	ul.w8 li , ul li.w8 {width:	12.5%;	}
+
+	ul.s1 li , ul li.s1 {width: 98%;	margin-left: 1%; margin-right: 1%;	}
+	ul.s2 li , ul li.s2 {width: 48%;	margin-left: 1%; margin-right: 1%;	}
+	ul.s3 li , ul li.s3 {width: 31.333%;margin-left: 1%; margin-right: 1%;	}
+	ul.s4 li , ul li.s4 {width: 23%;	margin-left: 1%; margin-right: 1%;	}
+	ul.s5 li , ul li.s5 {width: 18%;	margin-left: 1%; margin-right: 1%;	}
+	ul.s6 li , ul li.s6 {width: 14.666%;margin-left: 1%; margin-right: 1%;	}
+	ul.s7 li , ul li.s7 {width: 12.285%;margin-left: 1%; margin-right: 1%;	}
+	ul.s8 li , ul li.s8 {width: 10.5%;	margin-left: 1%; margin-right: 1%;	}
+
+	ul.b3 li , ul li.b3 {width: 26.5%;margin-left: 1%;margin-right: 1%;}
+	ul.F2 li , ul li.F2 {width: 48%;	margin-left: 1%; margin-right: 1%;}
+
+	.w30	{	width:	29.5%;	width:-webkit-calc(31.33% - 32px);	width:calc(31.33% - 32px);	}
+
+
+	div.bot10 , ul.bot10 li ,ul li.bot10 {margin-bottom:	10px;}
+	div.bot20 , ul.bot20 li ,ul li.bot20 {margin-bottom:	20px;}
+	div.bot30 , ul.bot30 li ,ul li.bot30 {margin-bottom:	30px;}
+
+
+	ul li.w440 {width:	440px;	}
+
+	@media (max-width:	991px) {
+		ul.hw li , ul li.hw ,
+		ul.hs li , ul li.hs {
+			margin-left:		auto;
+			margin-right:		auto;
+			width: 				98%;
+			max-width:			720px;
+		}
+	}
+
+	@media (max-width:	991px) {
+		ul.w4 li , ul li.w4 ,
+		ul.w5 li , ul li.w5 ,
+		ul.w6 li , ul li.w6 ,
+		ul.w7 li , ul li.w7 ,
+		ul.w8 li , ul li.w8 {width:	33.333%;		}
+
+		ul.s4 li , ul li.s4 ,
+		ul.s5 li , ul li.s5 ,
+		ul.s6 li , ul li.s6 ,
+		ul.s7 li , ul li.s7 ,
+		ul.s8 li , ul li.s8 {width:	31.333%;		}
+	}
+
+	@media (max-width:	767px) {
+		ul.image_block li ,
+		ul.w2 li , ul li.w2 ,
+		ul.w3 li , ul li.w3 ,
+		ul.w4 li , ul li.w4 ,
+		ul.w5 li , ul li.w5 ,
+		ul.w6 li , ul li.w6 ,
+		ul.w7 li , ul li.w7 ,
+		ul.w8 li , ul li.w8 {width:	100%;		}
+
+		ul.b3 li , ul li.b3 ,
+		ul.s2 li , ul li.s2 ,
+		ul.s3 li , ul li.s3 ,
+		ul.s4 li , ul li.s4 ,
+		ul.s5 li , ul li.s5 ,
+		ul.s6 li , ul li.s6 ,
+		ul.s7 li , ul li.s7 ,
+		ul.s8 li , ul li.s8 {width:	98%;		}
+	}
+
+	/*	DIV ul li 内要素  */
+	ul li a ,
+	ul li p ,
+	ul li a p ,
+	ul li div {
+		display:				block;
+	}
+
+	ul li a img 	,
+	ul li p img 	,
+	ul li a p img	,
+	ul li div img	{
+		display:				block;
+		width:					100%;
+		height:					auto;
+	}
+
+	ul li a img.auto 	,
+	ul li p img.auto 	,
+	ul li a p img.auto	,
+	ul li div img.auto	{
+		display:				block;
+		width:					auto !imporant;
+	}
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+width
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+	.w30	{	width:	29.5%;	width:-webkit-calc(31.33% - 32px);	width:calc(31.33% - 32px);	}
+
+	.w100	{	width:	99%;	width:-webkit-calc(100%- 2px);	width:calc(100%- 2px);	}
+	.w90	{	width:	89.5%;	width:-webkit-calc(90% - 2px);	width:calc(90% - 2px);	}
+	.w85	{	width:	84.5%;	width:-webkit-calc(85% - 2px);	width:calc(85% - 2px);	}
+	.w80	{	width:	79.5%;	width:-webkit-calc(80% - 2px);	width:calc(80% - 2px);	}
+	.w75	{	width:	74.5%;	width:-webkit-calc(75% - 2px);	width:calc(75% - 2px);	}
+	.w70	{	width:	69.5%;	width:-webkit-calc(70% - 2px);	width:calc(70% - 2px);	}
+	.w65	{	width:	64.5%;	width:-webkit-calc(65% - 2px);	width:calc(65% - 2px);	}
+	.w60	{	width:	59.5%;	width:-webkit-calc(60% - 2px);	width:calc(60% - 2px);	}
+	.w55	{	width:	54.5%;	width:-webkit-calc(55% - 2px);	width:calc(55% - 2px);	}
+	.w50	{	width:	49.5%;	width:-webkit-calc(50% - 2px);	width:calc(50% - 2px);	}
+	.w45	{	width:	44.5%;	width:-webkit-calc(45% - 2px);	width:calc(45% - 2px);	}
+	.w40	{	width:	39.5%;	width:-webkit-calc(40% - 2px);	width:calc(40% - 2px);	}
+	.w35	{	width:	34.5%;	width:-webkit-calc(35% - 2px);	width:calc(35% - 2px);	}
+	.w30	{	width:	29.5%;	width:-webkit-calc(30% - 2px);	width:calc(30% - 2px);	}
+	.w25	{	width:	24.5%;	width:-webkit-calc(25% - 2px);	width:calc(25% - 2px);	}
+	.w20	{	width:	19.5%;	width:-webkit-calc(20% - 2px);	width:calc(20% - 2px);	}
+	.w15	{	width:	14.5%;	width:-webkit-calc(15% - 2px);	width:calc(15% - 2px);	}
+	.w10	{	width:	9.5%;	width:-webkit-calc(10% - 2px);	width:calc(10% - 2px);	}
+
+	.ht720	{	min-height:	720px;	}
+	.ht640	{	min-height:	640px;	}
+	.ht560	{	min-height:	560px;	}
+	.ht480	{	min-height:	480px;	}
+	.ht400	{	min-height:	400px;	}
+	.ht360	{	min-height:	360px;	}
+	.ht320	{	min-height:	320px;	}
+	.ht280	{	min-height:	280px;	}
+	.ht240	{	min-height:	240px;	}
+
+	@media only screen and (min-width:	450px) and (max-width:	991px) {
+		.sm-ht720	{	min-height:	720px;	}
+		.sm-ht640	{	min-height:	640px;	}
+		.sm-ht560	{	min-height:	560px;	}
+		.sm-ht480	{	min-height:	480px;	}
+		.sm-ht400	{	min-height:	400px;	}
+		.sm-ht360	{	min-height:	360px;	}
+		.sm-ht320	{	min-height:	320px;	}
+		.sm-ht280	{	min-height:	280px;	}
+		.sm-ht240	{	min-height:	240px;	}
+	}
+
+
+	.wd640	{	width:	640px;	}
+	.wd560	{	width:	560px;	}
+	.wd480	{	width:	480px;	}
+	.wd400	{	width:	400px;	}
+	.wd360	{	width:	360px;	}
+	.wd320	{	width:	320px;	}
+	.wd280	{	width:	280px;	}
+	.wd240	{	width:	240px;	}
+
+
+	.wrap440 ,
+	.wrap1440 ,
+	.wrap1320 ,
+	.wrap1200 ,
+	.wrap1080 ,
+	.wrap960 ,
+	.wrap880 ,
+	.wrap800 {
+			display:			block;
+			width:				98%;
+			margin-left:		auto;
+			margin-right:		auto;
+			word-break:			break-all;
+	}
+	.wrap1440 {	max-width:1440px;}
+	.wrap1320 {	max-width:1320px;}
+	.wrap1200 {	max-width:1200px;}
+	.wrap1080 {	max-width:1080px;}
+	.wrap960 {	max-width:960px;}
+	.wrap880 {	max-width:880px;}
+	.wrap800 {	max-width:800px;}
+	.wrap440 {	max-width:440px;}
+
+	@media only screen and (min-width:	768px) {
+		.wrap720 ,
+		.wrap640 ,
+		.wrap560 ,
+		.wrap480 ,
+		.wrap400 ,
+		.wrap320 ,
+		.wrap180 ,
+		.wrap240 {
+			display:			block;
+			word-break:			break-all;
+		}
+		.wrap720 {	width:720px;}
+		.wrap640 {	width:640px;}
+		.wrap560 {	width:560px;}
+		.wrap480 {	width:480px;}
+		.wrap400 {	width:400px;}
+		.wrap320 {	width:320px;}
+		.wrap240 {	width:240px;}
+		.wrap180 {	width:180px;}
+	}
+
+	@media only screen and (max-width:	767px) {
+		.wrap720 ,
+		.wrap640 ,
+		.wrap560 ,
+		.wrap480 ,
+		.wrap400 ,
+		.wrap320 ,
+		.wrap180 ,
+		.wrap240 {
+			display:			block;
+			width:				98% !important;
+			margin-left:		auto;
+			margin-right:		auto;
+			word-break:			break-all;
+		}
+	}
+
+
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■
+head-desc
+■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+	#wrap_desc		{
+		padding:				0;
+	}
+	#inner_desc		{
+		line-height:			1;
+		font-weight:			normal;
+	}
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■
+headline
+■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+	#wrap_head	{
+		background-color:		transparent;
+	}
+	#wrap_head img {
+		width:					100%;
+		height:					auto;
+		margin:					0;
+	}
+
+	/*	DIV ul */
+	ul.headline {
+		position:				relative;
+		display:				flex;
+		list-style:				none;
+		background-color:		transparent;
+		padding:				0;
+	 	-webkit-flex-wrap: 		wrap; /* Safari */
+		flex-wrap:		 		wrap;
+		-webkit-align-content:	flex-start; /* Safari */
+		align-content:			flex-start;
+		-webkit-flex-direction:	row;
+		flex-direction:			row;
+	}
+
+	ul.headline {
+		justify-content: 		flex-start;
+		margin:					0;
+	}
+
+	ul.headline li:first-child {
+		margin-right: 			auto;
+	}
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■■
+head_container
+■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+	/*oooooooooooooooooooooooooooooooooooooooooooooooooo
+	slider-pro
+	ooooooooooooooooooooooooooooooooooooooooooooooooooo*/
+	.sp-custom {
+		background-image:		url("http://dresstokyo.com/wp/wp-content/themes/theme_dress/image/bg_overay_slash.png");
+	}
+
+	div.overlay_slash{background-image:	url("http://dresstokyo.com/wp/wp-content/themes/theme_dress/image/bg_overay_slash.png");	}
+	div.overlay_check{background-image:	url("http://dresstokyo.com/wp/wp-content/themes/theme_dress/image/bg_overay_check.png");	}
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■
+special-headder
+■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+	.padV30{	padding-top:	30px;padding-bottom:30px;}
+
+	.bg_desc{
+		background-color:		#fdfbe9;
+	}
+
+	.bg_floral_pink{
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/bg_floral_pink.png");
+	}
+	.bg_floral_gray{
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/bg_floral_gray.png");
+	}
+
+	#wrap_copy{
+		padding:				30px 0;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/bg_floral_gray.png");
+	}
+
+
+	.head_left{
+		display:				block;
+		width:					90%;
+		max-width:				760px;
+		margin-left:			auto;
+		margin-right:			0;
+	}
+
+	div.logo_head{
+		display:				block;
+		width:					252px;
+		height:					135px;
+	}
+	div.banner{
+		display:				block;
+		width:					185px;
+		height:					135px;
+	}
+
+	p.headline_text{
+		display:				block;
+		margin:					0;
+		padding:				0;
+	}
+
+	@media (min-width: 992px) {
+		p.headline_text{
+			margin-left:		391px;
+			width:				570px;
+		}
+	}
+
+	@media (max-width: 991px) {
+		p.headline_text{
+			padding-left:		0px;
+			width:				98%;
+			margin:				0 auto;
+		}
+	}
+
+
+
+
+	span.white{
+		color:					#fff;
+		border-bottom:			1px dashed #fff;
+		line-height:			1.2;
+	}
+	span.white:hover{
+		color:					orange;
+		border-bottom:			1px dashed orange;
+	}
+	.line150{line-height:		1.5;	}
+	.line200{line-height:		2.0;	}
+	.line250{line-height:		2.5;	}
+
+	p.mark100{
+		display:				block;
+		width:					100px;
+		padding:				5px 10px !important;
+		border:					1px solid #584135;
+		background-color:		#584135;
+		border-radius:			10px;
+		color:					#fff;
+		margin:					10px 0 5px 0;
+	}
+
+	a.link100{
+		display:				block;
+		width:					140px;
+		padding:				5px 10px !important;
+		border:					1px solid transparent;
+		text-align:				center;
+		color:					#fff;
+		margin:					0 auto;
+		background-color:		darkorange;
+	}
+	a.link100:hover{
+		background-color:		orangered;
+	}
+
+	.BLINK{
+		background-color:		maroon;
+		color:					#fff;
+	}
+
+
+	div.shop_welcome{
+		display:				block;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/shop_welcom.png");
+		background-repeat: 		no-repeat;
+		background-position: 	center right;
+	}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+wrap/inner_navi
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+	#wrap_navi{
+		border:					1px solid transparent;
+		background-color:		transparent;
+	}
+	#inner_navi {
+		display:				block;
+		margin-left:			auto;
+		margin-right:			auto;
+		padding:				0;
+		width:					100%;
+		max-width:				991px;
+		word-break:				break-all;
+		height:					auto;	
+	}
+
+	@media only screen and (min-width:	992px) {
+		#wrap_navi{
+			padding:				10px 0;
+			border:					1px solid transparent;
+			background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/menu.png");
+		}
+		#wrap_navi{
+			border-top-color:		#ccc !important;
+			border-bottom-color:	#ccc !important;
+		}
+		.bg_navi{
+			background-color:		#735341 !important;
+		}
+
+	}
+	@media only screen and (max-width:	991px) {
+		#wrap_navi{
+			padding:				0;
+		}
+	}
+
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+toggle
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	@media only screen and (min-width:	992px) {
+		#toggle{ 
+			display:				none;
+		}
+	}
+	@media only screen and (max-width:	991px) {
+		/*toggle*/
+
+		#toggle{
+			display:			block;
+			position:			relative;
+			width:				100%;
+			background:			#222;
+		}
+		#toggle a{
+			display:			block;
+			position:			relative;
+			padding:			12px 0 10px;
+			border-bottom:		1px solid #444;
+			color:				#fff;
+			text-align:			center;
+			text-decoration:	none;
+		}
+		#toggle:before{
+			display:			block;
+			content:			"";
+			position:			absolute;
+			top:				50%;
+			left:				10px;
+			width:				20px;
+			height:				20px;
+			margin-top:			-10px;
+			background:			#fff;
+		}
+		#toggle a:before, #toggle a:after{
+			display:			block;
+			content:			"";
+			position:			absolute;
+			top:				50%;
+			left:				10px;
+			width:				20px;
+			height:				4px;
+			background:			#222;
+		}
+		#toggle a:before{
+			margin-top:			-6px;
+		}
+		#toggle a:after{
+			margin-top:			2px;
+		}
+	}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+navibar
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+
+	#navibar{
+		display:				flex;
+		list-style:				none;
+		background-color:		transparent;
+		-webkit-flex-wrap: 		wrap;
+		flex-wrap:				wrap;
+		-webkit-align-content:	flex-start;
+		align-content:			flex-start;
+		margin:					0 auto;
+		padding:				0;
+	}
+
+
+	#navibar li{
+		display:				block;
+		margin:					0;
+		padding:				0;
+	}
+	
+	#navibar li a{
+	 	display: 				block;
+		margin:					0;
+		padding:				0;
+		border:					1px solid transparent;
+		text-decoration: 		none;
+		text-align:				center;
+	}
+	
+	#navibar li a p{
+		display:				block;
+		text-align:				center;
+		text-decoration:		none;
+	}
+	#navibar li a p span.lab{
+		display:				block;
+		text-align:				center;
+		text-decoration:		none;
+		color:					#aaa;
+	}
+	
+
+/*
+------------------------------------------------
+responsible
+------------------------------------------------
+*/
+	@media only screen and (min-width:	992px) {
+
+		#navibar{
+			width:					100%;
+		}
+		#navibar li{
+			width:					16.6%;
+			padding:				0;
+		}
+		#navibar li a{
+			border-right-color:		#ccc ;	/*左罫線*/
+		}
+		#navibar li:first-child a{
+			border-left-color:		#ccc ;
+		}
+		#navibar li a p{
+			border-top:				0px solid transparent;
+			border-bottom:			0px solid transparent;
+		}
+		#navibar li a p{
+			padding:				5px 5px;
+			margin:					0 0 0 0;
+			color:					#fff;
+		}
+
+	}
+
+	@media only screen and (max-width:	991px) {
+
+		#navibar{
+			width:					100%;
+			background-color:		#fff;
+		}
+
+		#navibar{	display:	none;		}
+		#navibar li a{
+			border-right-color:	transsparent;
+		}
+
+		#navibar li{
+			width:					100%;
+			padding:				0;
+		}
+
+		#navibar li a p{
+			border-left:			0px solid transparent;
+			border-right:			0px solid transparent;
+			border-top:				0px solid transparent;
+			border-bottom:			1px solid #ccc;
+		}
+		#navibar li a p{
+			padding:				25px 0px;
+		}
+
+	}
+
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+navi_top navi_page
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	ul.navi_top li a p ,
+	ul.navi_page li a p {
+		line-height:			1;
+		font-size:				1.0em;
+		font-weight:			normal;
+	}
+	ul.navi_top li a p lab ,
+	ul.navi_page li a p lab{
+		display:				block;
+		width:					100%;
+		line-height:			1;
+		font-size:				0.8em;
+		font-weight:			normal;
+		color:					#eee;
+		padding-top:			2px;
+	}
+
+	ul.navi_top li a:hover >p ,
+	ul.navi_page li a:hover >p {
+		text-decoration:		none !important;
+	}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+color color_hover
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+	ul.navi_top li p ,
+	ul.navi_top li a p {
+		font-weight:			bold;
+	}
+	ul.navi_top li a p lab{
+		color:					#eee;
+	}
+	ul.navi_page li a p lab{
+		color:					#eee;
+	}
+	@media only screen and (min-width:	992px) {
+		ul.navi_page li p ,
+		ul.navi_page li a p {
+			font-weight:			bold;
+		}
+		ul.navi_top li a:hover >p {
+			background-color:		#b89368;
+		}
+		ul.navi_page li a:hover >p {
+			background-color:		#b89368;
+		}
+	}
+	@media only screen and (max-width:	991px) {
+		ul.navi_page li p ,
+		ul.navi_page li a p {
+			color:					#111;
+			font-weight:			bold;
+		}
+		ul.navi_top li a:hover > p {
+			background: 		rgb(65, 105, 225) !important;
+			background: 		rgba(65, 105, 225, 0.7) !important;/*defaulhover*/
+			color:				#fff !important;
+		}
+		ul.navi_top li a:hover > p lab{
+			color:				#eee !important;
+		}
+		ul.navi_page li a:hover > p {
+			background: 		rgb(65, 105, 225) !important;
+			background: 		rgba(65, 105, 225, 0.7) !important;/*defaulhover*/
+			color:				#fff !important;
+		}
+		ul.navi_page li a:hover > p lab{
+			color:				#eee !important;
+		}
+	}
+
+
+/*
+274aa1青系
+0044cf青系0497db
+0e7ac4 青系
+0084cf
+40aaef 薄青系
+40e0d0　ターコイズ基本
+00cdcd　ターコイズ明
+007676　ターコイズ暗
+■■■■■■■■■■■■■■■■■■■■■■■■■
+color
+■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+.clr_111	{color:	rgb(17, 17, 17) !important;	}
+.clr_333	{color:	rgb(51, 51, 51) !important;	}
+.clr_555	{color:	rgb(85, 85, 85) !important;	}
+.clr_777	{color:	rgb(119, 119, 119) !important;	}
+.clr_999	{color:	rgb(153, 153, 153) !important;	}
+.clr_ccc	{color:	rgb(204, 204, 204) !important;	}
+.clr_eee	{color:	rgb(238, 238, 238) !important;	}
+.clr_fff	{color:	rgb(255, 255, 255) !important;	}
+
+.clr_blu	{color:	#0062AC	!important;	}
+.clr_rbl	{color:	#225fe7	!important;	}
+.clr_dbl	{color:	#142878	!important;	}
+.clr_ryb	{color:	#4169e1	!important;	}
+.clr_sky	{color:	#d3e9f9	!important;	}
+.clr_tac	{color:	#00958D	!important;	}
+.clr_lta	{color:	#40e0d0	!important;	}
+.clr_grn	{color:	#90c31f	!important;	}
+.clr_bgr	{color:	#009520	!important;	}
+.clr_dgr	{color:	#007f00	!important;	}
+
+.clr_kak	{color:	#938a59	!important;	}
+.clr_brw	{color:	#8a0d0f	!important;	}
+.clr_lbr	{color:	#cd853f	!important;	}
+
+.clr_org	{color:	#ff8c00	!important;	}
+.clr_ord	{color:	#e94f0c	!important;	}
+.clr_red	{color:	#D7004A	!important;	}
+.clr_skr	{color:	#d671e8	!important;	}
+.clr_pnk	{color:	#d34186	!important;	}
+.clr_dpk	{color:	#D60077	!important;	}
+.clr_pur	{color:	#9e3786	!important;	}
+.clr_vio	{color:	#7b5993	!important;	}
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■
+border-color
+■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+.bdc_111	{border-color:	#111 !important;	}
+.bdc_333	{border-color:	#333 !important;	}
+.bdc_555	{border-color:	#555 !important;	}
+.bdc_777	{border-color:	#777 !important;	}
+.bdc_999	{border-color:	#777 !important;	}
+.bdc_ccc	{border-color:	#777 !important;	}
+.bdc_eee	{border-color:	#777 !important;	}
+.bdc_fff	{border-color:	#fff !important;	}
+
+.bdc_blu	{border-color:	#0062AC !important;	}
+.bdc_rbl	{border-color:	#225fe7 !important;	}
+.bdc_dbl	{border-color:	#142878 !important;	}
+.bdc_ryb	{border-color:	#4169e1 !important;	}
+.bdc_sky	{border-color:	#d3e9f9 !important;	}
+.bdc_tac	{border-color:	#00958D !important;	}
+.bdc_lta	{border-color:	#40e0d0 !important;	}
+.bdc_grn	{border-color:	#90c31f !important;	}
+.bdc_bgr	{border-color:	#009520 !important;	}
+.bdc_dgr	{border-color:	#007f00 !important;	}
+
+.bdc_kak	{border-color:	#938a59 !important;	}
+.bdc_brw	{border-color:	#8a0d0f !important;	}
+.bdc_lbr	{border-color:	#cd853f !important;	}
+
+.bdc_org	{border-color:	#ff8c00 !important;	}
+.bdc_ord	{border-color:	#e94f0c !important;	}
+.bdc_red	{border-color:	#D7004A !important;	}
+.bdc_skr	{border-color:	#d671e8 !important;	}
+.bdc_pnk	{border-color:	#d34186 !important;	}
+.bdc_dpk	{border-color:	#D60077 !important;	}
+.bdc_pur	{border-color:	#9e3786 !important;	}
+.bdc_vio	{border-color:	#7b5993 !important;	}
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■
+background - color
+■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+.bgc_111	{background-color:	#111 !important;	}
+.bgc_333	{background-color:	#333 !important;	}
+.bgc_555	{background-color:	#555 !important;	}
+.bgc_777	{background-color:	#777 !important;	}
+.bgc_999	{background-color:	#777 !important;	}
+.bgc_ccc	{background-color:	#777 !important;	}
+.bgc_eee	{background-color:	#777 !important;	}
+.bgc_fff	{background-color:	#fff !important;	}
+
+.bgc_blu	{background-color:	#0062AC !important;	}
+.bgc_rbl	{background-color:	#225fe7 !important;	}
+.bgc_dbl	{background-color:	#142878 !important;	}
+.bgc_ryb	{background-color:	#4169e1	!important;	}
+
+.bgc_sky	{background-color:	#d3e9f9 !important;	}
+.bgc_tac	{background-color:	#00958D !important;	}
+.bgc_lta	{background-color:	#40e0d0 !important;	}
+.bgc_grn	{background-color:	#90c31f !important;	}
+.bgc_bgr	{background-color:	#009520 !important;	}
+.bgc_dgr	{background-color:	#007f00 !important;	}
+
+.bgc_kak	{background-color:	#938a59 !important;	}
+.bgc_brw	{background-color:	#8a0d0f !important;	}
+.bgc_lbr	{background-color:	#cd853f !important;	}
+
+.bgc_org	{background-color:	#ff8c00 !important;	}
+.bgc_ord	{background-color:	#e94f0c !important;	}
+.bgc_red	{background-color:	#D7004A !important;	}
+.bgc_skr	{background-color:	#d671e8 !important;	}
+.bgc_pnk	{background-color:	#d34186 !important;	}
+.bgc_dpk	{background-color:	#D60077 !important;	}
+.bgc_pur	{background-color:	#9e3786 !important;	}
+.bgc_vio	{background-color:	#7b5993 !important;	}
+
+
+.bgo_111	{background-color:	rgba( 17, 17, 17,0.3) !important;	}
+.bgo_333	{background-color:	rgba( 51, 51, 51,0.3) !important;	}
+.bgo_555	{background-color:	rgba( 85, 85, 85,0.3) !important;	}
+.bgo_777	{background-color:	rgba(119,119,119,0.3) !important;	}
+.bgo_blu	{background-color:	rgba(  0, 98,172,0.3) !important;	}
+.bgo_rbl	{background-color:	rgba( 34, 95,231,0.3) !important;	}
+.bgo_dbl	{background-color:	rgba( 20, 40,120,0.3) !important;	}
+.bgo_ryb	{background-color:	rgba( 65,105,225,0.3) !important;	}
+
+.bgo_sky	{background-color:	rgba(211,233,249,0.3) !important;	}
+.bgo_tac	{background-color:	rgba(  0,149,141,0.3) !important;	}
+.bgo_lta	{background-color:	rgba( 64,224,208,0.3) !important;	}
+.bgo_grn	{background-color:	rgba(144,195, 31,0.3) !important;	}
+.bgo_bgr	{background-color:	rgba(  0,149, 32,0.3) !important;	}
+.bgo_dgr	{background-color:	rgba(  0,127,  0,0.3) !important;	}
+
+.bgo_kak	{background-color:	rgba(147,138, 89,0.3) !important;	}
+.bgo_brw	{background-color:	rgba(138, 13, 15,0.3) !important;	}
+.bgo_lbr	{background-color:	rgba(205,133, 63,0.3) !important;	}
+
+.bgo_org	{background-color:	rgba(255,140,  0,0.3) !important;	}
+.bgo_ord	{background-color:	rgba(233, 79, 12,0.3) !important;	}
+.bgo_red	{background-color:	rgba(215,  0, 74,0.3) !important;	}
+.bgo_skr	{background-color:	rgba(214,113,232,0.3) !important;	}
+.bgo_pnk	{background-color:	rgba(211, 65,134,0.3) !important;	}
+.bgo_dpk	{background-color:	rgba(214,  0,119,0.3) !important;	}
+.bgo_pur	{background-color:	rgba(158, 55,134,0.3) !important;	}
+.bgo_vio	{background-color:	rgba(123, 89,147,0.3) !important;	}
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■
+background & text - color
+■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+.bg_111		{background-color:	#111	!important;	color:	#fff	!important;	}
+.bg_222		{background-color:	#222	!important;	color:	#fff	!important;	}
+.bg_333		{background-color:	#333	!important;	color:	#fff	!important;	}
+.bg_555		{background-color:	#555	!important;	color:	#fff	!important;	}
+.bg_777		{background-color:	#777	!important;	color:	#fff	!important;	}
+.bg_ccc		{background-color:	#ccc	!important;	color:	#111	!important;	}
+.bg_ddd		{background-color:	#ddd	!important;	color:	#111	!important;	}
+.bg_eee		{background-color:	#eee	!important;	color:	#111	!important;	}
+.bg_fff		{background-color:	#fff	!important;	color:	#111	!important;	}
+
+.bg_blu		{background-color:	#0062AC	!important;	color:	#fff	!important;	}
+.bg_rbl		{background-color:	#225fe7	!important;	color:	#fff	!important;	}
+.bg_dbl		{background-color:	#142878	!important;	color:	#fff	!important;	}
+.bg_ryb		{background-color:	#4169e1	!important;	color:	#fff	!important;	}
+
+.bg_sky		{background-color:	#d3e9f9	!important;	color:	#0062AC	!important;	}
+.bg_tac		{background-color:	#00958D	!important;	color:	#fff	!important;	}
+.bg_lta		{background-color:	#40e0d0	!important;	color:	#0062AC	!important;	}
+.bg_grn		{background-color:	#90c31f	!important;	color:	#fff	!important;	}
+.bg_bgr		{background-color:	#009520	!important;	color:	#fff	!important;	}
+.bg_dgr		{background-color:	#007f00	!important;	color:	#fff	!important;	}
+.bg_org		{background-color:	#ff8c00	!important;	color:	#fff	!important;	}
+.bg_ord		{background-color:	#e94f0c	!important;	color:	#fff	!important;	}
+.bg_red		{background-color:	#D7004A	!important;	color:	#fff	!important;	}
+.bg_brw		{background-color:	#8a0d0f !important;	color:	#fff	!important;	}
+
+
+.bg_skr		{background-color:	#d671e8	!important;	color:	#fff	!important;	}
+.bg_pnk		{background-color:	#d34186	!important;	color:	#fff	!important;	}
+.bg_dpk		{background-color:	#D60077	!important;	color:	#fff	!important;	}
+.bg_pur		{background-color:	#9e3786	!important;	color:	#fff	!important;	}
+.bg_vio		{background-color:	#7b5993	!important;	color:	#fff	!important;	}
+
+
+.bg_img{
+			background-color: 		#fff;
+			background-repeat: 		no-repeat !important;
+			background-position: 	left center;
+			background-size: 		cover;
+}
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■
+hover
+■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+.hov_base{background-color:#fff;	display:block;}
+
+.hov_blu:hover{	background-color:#0062AC;}
+.hov_rbl:hover{	background-color:#225fe7;}
+.hov_dbl:hover{	background-color:#142878;}
+.hov_ryb:hover{	background-color:#4169e1;}
+.hov_tac:hover{	background-color:#00958D;}
+.hov_grn:hover{	background-color:#90c31f;}
+.hov_bgr:hover{	background-color:#009520;}
+.hov_org:hover{	background-color:#ff8c00;}
+.hov_ord:hover{	background-color:#e94f0c;}
+.hov_red:hover{	background-color:#d7004a;}
+.hov_skr:hover{	background-color:#d671e8;}
+.hov_pnk:hover{	background-color:#d34186;}
+.hov_dpk:hover{	background-color:#D60077;}
+.hov_pur:hover{	background-color:#9e3786;}
+.hov_vio:hover{	background-color:#7b5993;}
+.hov_ccc:hover{	background-color:#ccc;}
+.hov_ddd:hover{	background-color:#ddd;}
+.hov_eee:hover{	background-color:#eee;}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■
+sp
+■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+
+	.sidearea {
+		display:				block;
+	}
+
+	.side_bg{
+		background-color:		#f8e9d9 !important;
+	}
+
+	.side_head{
+		display:				block;
+		background-color:		#f8e9d9;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/sbx_side_head.png");
+		background-repeat: 		no-repeat;
+		background-position: 	center top;
+		background-size:		100% auto;
+		text-align:				center;
+		padding-top:			30px;
+		font-weight:			bold;
+		margin-bottom:			0;
+	}
+	.side_body{
+		display:				block;
+		background-color:		#f8e9d9;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/sbx_side_body.png");
+		background-repeat: 		no-repeat;
+		background-position: 	center bottom;
+		background-size:		100% auto;
+		text-align:				center;
+		padding-bottom:			0px;
+		margin-bottom:			20px;
+		margin-top:				0;
+	}
+
+	div.side_body img ,
+	div.side_body a img {
+		display:				block;
+		width:					100%;
+		height:					auto;
+	}
+	.side_body:after{
+		display:				block;
+		height:					20px;
+		content:				"";
+		background-color:		#f8e9d9;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/sbx_side_innerline.png");
+		background-repeat: 		no-repeat;
+		background-position: 	center top;
+	}
+
+	.main_body{
+		background-color:		#fbf7f3;
+		border:					1px solid #ccc;
+		text-align:				center;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_corner_2.png");
+		background-repeat: 		no-repeat;
+		background-position: 	right bottom;
+	}
+
+	.side_box{
+		display:				block;
+		background-color:		#fff;
+		border:					1px solid #ccc;
+		margin-bottom:			20px;
+	}
+
+	.side_obj{
+		display:				block;
+		width:					204px;
+	}
+
+
+	@media (min-width: 992px) {
+		.sidearea {
+			width:				204px;
+		}
+
+		.side_head{
+			width:				204px;
+			height:				66px;
+		}
+		.side_body{
+			width;				196px;
+			padding-left:		4px;
+			padding-right:		4px;
+		}
+		.side_box{
+			width;				196px;
+		}
+
+		ul.blockmain ,
+		ul.blockside{
+			margin-left:		auto;
+			margin-right:		auto;
+		}
+
+		ul.blockside{
+			width:				204px;
+		}
+		ul.blockmain{
+			width:				720px;
+		}
+
+		ul.blockmain li ,
+		ul.blockside li{
+			display:			block;
+			width:				204px;
+			margin-bottom:		10px;
+		}
+
+		ul.blockside li{
+			padding:			0;
+		}
+		ul.blockmain li{
+			padding-left:		18px;
+			padding-right:		18px;
+		}
+
+	}
+	@media only screen and (max-width: 991px) {
+		.sidearea {
+			width:				100%;
+			padding-top:		10px;
+			padding-bottom:		10px;
+			background-color:	#f8e9d9;
+
+		}
+		.side_head{
+			width:				204px;
+			height:				66px;
+		}
+		.main_body ,
+		.side_body{
+			width;				196px;
+			padding-left:		4px;
+			padding-right:		4px;
+		}
+
+		ul.blockside ,
+		ul.blockmain{
+			width:				720px;
+			margin-left:		auto;
+			margin-right:		auto;
+		}
+		ul.blockmain li ,
+		ul.blockside li{
+			width:				204px;
+			padding-left:		18px;
+			padding-right:		18px;
+		}
+
+		ul.blockmain li ,
+		ul.blockside li{
+			display:			block;
+			width:				204px;
+			margin-bottom:		10px;
+		}
+
+		.mincenter{
+			display:			block;
+			margin-left:		auto;
+			margin-right:		auto;
+		}
+
+	}
+	@media only screen and (max-width: 767px) {
+
+		.side_head{
+			width:				204px;
+			height:				66px;
+		}
+
+		.main_body ,
+		.side_body{
+			width;				100%;
+		}
+
+		ul.blockmain ,
+		ul.blockside{
+			width:				480px;
+			margin-left:		auto;
+			margin-right:		auto;
+		}
+
+		ul.blockmain li ,
+		ul.blockside li{
+			display:			block;
+			width:				48%;
+			padding-left:		1%;
+			padding-right:		1%;
+			margin-bottom:		10px;
+		}
+	}
+
+	@media only screen and (max-width: 520px) {
+
+		ul.blockmain ,
+		ul.blockside{
+			width:				320px;
+		}
+
+	}
+
+	@media only screen and (max-width: 374px) {
+
+		ul.blockmain ,
+		ul.blockside{
+			width:				260px;
+		}
+	}
+
+	.side_inner{
+		display:				block;
+		padding:				0 5px 5px 5px;
+	}
+	a.side_menu{
+		display:				block;
+		padding:				5px 10px !important;
+		border:					1px solid transparent;
+		text-align:				center;
+		color:					#fff !important;
+		margin-left:			20px;
+		margin-right:			20px;
+		margin-bottom:			10px;
+		background-color:		#473328 !important;
+	}
+	a.side_menu:hover{
+		color:					#473328 !important;
+		background-color:		#fff !important;
+	}
+	a.block_menu{
+		display:				block;
+		padding:				15px 5px 5px 5px !important;
+		border:					1px double #473328;
+		height:					56px;
+		text-align:				center;
+		font-weight:			900;
+		color:					#473328 !important;
+		margin-left:			5px;
+		margin-right:			5px;
+		margin-bottom:			10px;
+		background-color:		#f9fdce;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_main_bg.png");
+	}
+	a.block_menu:hover{
+		color:					#473328 !important;
+		background-color:		#fff !important;
+	}
+
+
+	.box_til ,
+	.box_sub ,
+	.box_bdy ,
+	.box_apd {
+		display:				block;
+		padding:				5px;
+		line-height:			1.2;
+	}
+	.box_til {
+		font-size:				1em;
+		font-weight:			bold;
+	}
+	.box_til h3.plane ,
+	#theArchive h3.plane ,
+	#theContent h3.plane {
+		background-image:		none !important;
+		padding-left:			0px !important;
+		padding-top:			0px;
+		margin-bottom:			0px;
+		font-size:				1em !important;
+		color:					#222;
+		min-height:				12px !important;
+	}
+
+	.box_bdy{
+		padding-bottom:			5px;
+		margin-bottom:			5px;
+		border-bottom:			1px dashed #ccc;
+	}
+
+
+	.wrap_wood	{
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/bg_wood.png");
+		padding-top:			10px !important;
+	}
+	.line_wood	{
+		display:				block;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/uploads/bb_flir.png");
+		background-repeat: 		repeat-x;
+		min-height:				40px;
+		text-align:				center;
+	}
+	
+	ul.dress li {
+		padding:				15px;
+		background-color:		#fbf7f3;
+		border:					1px solid #ccc;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/uploads/thecontent_corner_2.png");
+		background-repeat: 		no-repeat;
+		background-position: 	right bottom;
+		text-align:				center;
+	}
+
+	.all_list_no {
+		display:				block;
+		margin:					5px 0;
+		font-weight:			bold;
+		color:					#777;
+	}
+	.all_list_name {
+		display:				block;
+		font-weight:			bold;
+		color:					#222;
+		font-size:				0.9em;
+	}
+	.all_list_size {
+		display:				block;
+		margin:					3px 0;
+		font-weight:			bold;
+		color:					brown;
+	}
+	.all_list_price {
+		display:				block;
+		margin:					3px 0;
+		font-weight:			bold;
+		color:					crimson;
+	}
+
+	.pick_up_text{
+		display:				block;
+		margin-top:				10px;
+		padding:				0 5px;
+	}
+
+/*
+■■■■■■■■■■■■■■■■■■■■■■■■■
+footer
+■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+	#wrap_footer	{
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/bg_wood.png");
+	}
+	#line_footer		{
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/bb_flir.png");
+		background-repeat: 		repeat-x;
+	}
+
+	.footbanner{
+		display:				block;
+		width:					100%;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/kadann.jpg");
+		background-size:		100% auto;
+		text-align:				center;
+		margin-top:				10px;
+		font-family:			"Sawarabi Mincho";
+	}
+
+	#wrap_bottom		{
+		background-color:		#735341;/*defaultcolor*/
+		padding:				5px 0;
+		min-height:				100px;
+	}
+	#inner_bottom		{
+		line-height:			1;
+		text-align:				center;
+		color:					#fff;
+		font-size:				0.88em;
+		padding:				20px 0;
+	}
+
+	.wrap_plane{
+		display:				block;
+		background-color:		#fff;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_main_bg.png");
+		margin:					0px;
+		padding:				5px;
+		border:					5px solid #fff;
+	}
+
+
+	.wrap_content{
+		display:				block;
+		background-color:		#fff;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_main_bg.png");
+		margin:					20px;
+		padding:				20px;
+		border:					5px solid #fff;
+	}
+
+	.wrap_content_blu{
+		display:				block;
+		background-color:		#bdeaed;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_main_bg.png");
+		margin:					20px;
+		padding:				20px;
+		border:					5px solid #fff;
+	}
+	.wrap_content_yel{
+		display:				block;
+		background-color:		#f9fdce;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_main_bg.png");
+		margin:					20px;
+		padding:				20px;
+		border:					5px solid #fff;
+	}
+	.wrap_content_grn{
+		display:				block;
+		background-color:		#d9f6c2;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_main_bg.png");
+		margin:					20px;
+		padding:				20px;
+		border:					5px solid #fff;
+	}
+	.wrap_content_red{
+		display:				block;
+		background-color:		#ffe0f5;/*f8cdea;*/
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_main_bg.png");
+		margin:					10px 20px;
+		padding:				20px;
+		border:					5px solid #fff;
+	}
+
+
+
+
+
+
+
+	div.dress_info{
+		display:				block;
+		padding:				0;
+		margin:					0;
+	}
+
+	div.image_block ,
+	ul.image_block {
+		display:				block;
+		padding:				0 !important;
+		margin:					0 !important;
+		background-color:		#fff9f2;
+	}
+	ul.image_block li img{
+		display:				block;
+		width:					100%;
+		height:					auto;
+	}
+
+
+	div.info_block {
+		display:				block;
+		padding:				0 !important;
+		margin:					0 !important;
+		background-color:		#fff9f2;
+	}
+
+	div.block_price{
+		display:				block;
+		padding-top:			35px;
+		height:					190px;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/main_price.png");
+		background-repeat: 		no-repeat !important;
+		background-position: 	center center;
+		text-align:				center;
+		color:					#fff;
+		font-size:				1.2em;
+	}
+	div.block_form_full ,
+	div.block_form ,
+	div.block_detail{
+		display:				block;
+	}
+	div.block_form_full {
+		display:				block;
+		width:					98%;
+		margin-left:			auto;
+		margin-right:			auto;
+		text-align:				center;
+	}
+	div.block_cart_full {
+		display:				block;
+		width:					98%;
+		margin-left:			auto;
+		margin-right:			auto;
+		text-align:				center;
+	}
+
+	@media only screen and (min-width: 768px) {
+
+		div.block_form ,
+		div.block_price{
+			width:					47%;
+			margin-left:			1%;
+			margin-right:			1%;
+			float:					left;
+		}
+		div.block_detail{
+			width:					47%;
+			padding-left:			1%;
+			padding-right:			1%;
+			border-left:			1px dotted gray;
+			float:					left;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		div.block_form ,
+		div.block_price{
+			display:				block;
+			width:					98%;
+			margin-left:			auto;
+			margin-right:			auto;
+		}
+		div.block_detail{
+			display:				block;
+			width:					98%;
+			margin-left:			auto;
+			margin-right:			auto;
+		}
+	}
+
+
+
+	div.block_detail til{
+		display:				block;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_title.png");
+		background-repeat: 		no-repeat !important;
+		background-position: 	center bottom;
+		margin-bottom:			0px;
+		text-align:				center;
+		font-size:				1.2em;
+		font-weight:			bold !important;
+		height:					60px !important;
+		color:					#6a5b62;
+	}
+
+	table.list_block {
+		margin:					10px auto;
+	}
+	table.list_block tr {
+		border-top:				1px dotted #6a5b62;
+	}
+	table.list_block tr:last-child {
+		border-bottom:			1px dotted #6a5b62;
+	}
+
+	table.list_block td {
+		display:				table-cell;
+		border-left:			1px dotted #6a5b62;
+		padding:				10px;
+	}
+	table.list_block td:first-child {
+		width:					200px;
+	}
+	table.list_block td:last-child {
+		width:					350px;
+		border-right:			1px dotted #6a5b62;
+	}
+
+
+	div.dress_info info_head {
+		display:				block;
+		background-color:		#fff9f2;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/dress_table_bg1.png");
+		background-repeat: 		no-repeat !important;
+		background-position: 	center top;
+		background-size:		100% auto;
+		min-height:				85px;
+		padding-top:			15px;
+		color:					#523f34;
+		font-size:				2em;
+		font-weight:			bold;
+		text-align:				center;
+	}
+	div.dress_info info_body {
+		display:				block;
+		background-color:		#fff9f2;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/dress_table_bg2.png");
+		background-repeat: 		no-repeat !important;
+		background-position: 	center bottom;
+		background-size:		100% auto;
+		padding:				0 20px !important;
+		min-height:				260px;
+		margin-top:				0px !important;
+	}
+
+	.dress_table_bg1 {
+		display:				block;
+		background-color:		#fff9f2;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/dress_table_bg1.png");
+		background-repeat: 		no-repeat !important;
+		background-position: 	center top;
+		background-size:		100% auto;
+		min-height:				85px;
+		margin-top:				10px !important;
+		padding-top:			15px;
+		color:					#523f34;
+		text-align:				center;
+	}
+	.dress_table_bg2 {
+		display:				block;
+		background-color:		#fff9f2;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/dress_table_bg2.png");
+		background-repeat: 		no-repeat !important;
+		background-position: 	center bottom;
+		background-size:		100% auto;
+		padding:				0 20px;
+		min-height:				260px;
+	}
+
+	.dress_category {
+		display:				block;
+		background-color:		#fff9f2;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/all_top.jpg");
+		background-repeat: 		no-repeat !important;
+		background-position: 	center bottom;
+		border:					5px solid #fff;
+		background-size:		100% auto;
+		padding:				20px 20px 0;
+		min-height:				150px;
+		color:					#735341;
+		font-weight:			bold;
+		font-size:				1.3em;
+	}
+
+	div.bg_floral_pink h2 {
+		display:				block;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_title.png");
+		background-repeat: 		no-repeat !important;
+		background-position: 	center bottom;
+		margin-bottom:			10px;
+		text-align:				center;
+		font-size:				18px;
+		font-weight:			bold !important;
+		height:					56px !important;
+	}
+
+
+
+
+	div.intro_left{
+		display:				block;
+		float:					left;
+	}
+	div.intro_right{
+
+	}
+
+
+	div.coordinate{
+		display:				block;
+		float:					left;
+		width:					100%;
+		padding:				0 1% 0 5%;
+	}
+	div.cord_left{
+		display:				block;
+		float:					left;
+		width:					48%;
+	}
+	div.cord_right{
+		display:				block;
+		float:					left;
+		width:					48%;
+		padding-left:			20px;
+	}
+
+	@media only screen and (max-width: 767px) {
+		div.cord_left{
+			width:					96%;
+		}
+		div.cord_right{
+			width:					96%;
+			padding-left:			0px;
+		}
+
+	}
+
+	div.coordinate dress ,
+	div.coordinate accessory ,
+	div.coordinate bag ,
+	div.coordinate bolero ,
+	div.coordinate dress ,
+	div.coordinate accessory ,
+	div.cord_right bag ,
+	div.cord_right bolero{
+		padding:				0 0 5px 30px;
+	}
+
+	div.coordinate dress:before ,
+	div.coordinate accessory:before ,
+	div.coordinate bag:before ,
+	div.coordinate bolero:before ,
+	div.cord_right dress:before ,
+	div.cord_right accessory:before ,
+	div.cord_right bag:before ,
+	div.cord_right bolero:before{
+		display:				block;
+		padding:				5px 10px;
+		margin:					0px 0 5px 0;
+		background-color:		#523f34;
+		color:					#fff;
+		text-align:				center;
+		width:					120px;
+	}
+	div.coordinate bolero:before{	content:"ボレロ";	}
+	div.coordinate bag:before{		content:"バッグ";	}
+	div.coordinate accessory:before{content:"アクセサリ";	}
+	div.coordinate dress:before{content:"ドレス";	}
+	div.cord_right bolero:before{	content:"ボレロ";	}
+	div.cord_right bag:before{		content:"バッグ";	}
+	div.cord_right accessory:before{content:"アクセサリ";	}
+	div.cord_right dress:before{content:"ドレス";	}
+
+	footer#footer{
+		padding-top:			0 !important;
+	}
+
+	a.detail{
+		display:				block;
+		padding:				5px 10px;
+		margin:					5px 2px;
+		text-align:				center;
+		color:					#fff !important;
+		background-color:		transparent;
+	}
+
+	a.detail:hover{
+		color:					#222;
+		background-color:		orange;
+	}
+
+	div.product_item{
+		padding:				10px;
+		background-color:		#fbf7f3;
+		border:					1px solid #ccc;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/thecontent_corner_2.png");
+		background-repeat: 		no-repeat;
+		background-position: 	right bottom;
+		margin-bottom:			20px;
+	}
+	.item_price{
+		text-align:				center;
+		color:					crimson;
+	}
+
+	li.active a , 
+	li.pagenation__item-previous a , 
+	li.pagenation__item-next a , 
+	li.pagenation__item a{
+		padding:				5px;
+		border:					1px solid #ccc;
+		background-color:		#fbf7f3;
+		color:					#fff;
+	}
+	li.active a{
+		color:		#523f34 !important;
+	}
+
+	h3.item_name{
+		font-weight:			bold !important;
+		line-height:			1.5 !important;
+		font-size:				1.3em !important;
+	}
+
+	h3.detail_head{
+		color:					#523f34;
+		padding-top:			10px;
+		font-size:				1.3em;
+		text-align:				center;
+		width:					75%;
+		margin-left:			auto;
+		margin-right:			auto;
+	}
+
+	div.page_head{
+		display:				block;
+		background-image:		url("http://dresstokyo.com/wp/wp-content/uploads/h1b.png");
+		background-repeat: 		no-repeat;
+		background-position: 	center top;
+		background-size:		contain;
+		height:					63px;
+	}
+
+
+	div.white{
+		display:				block;
+		background-color:		#fff;
+		padding:				0 20px;
+		padding-bottom:			20px;
+	}
+
+	div.block60 ,
+	div.block70 ,
+	div.block80{
+		width:					80%;
+		margin-left:			auto;
+		margin-right:			auto;
+	}
+	div.block80{width:			80%;}
+	div.block70{width:			70%;}
+	div.block60{width:			60%;}
+
+	p.sale_price ,
+	p.normal_price ,
+	p.item_code{
+		display:				block;
+		padding-bottom:			0 !important;
+	}
+	p.item_code{
+		padding:				15px 0;
+		text-align:				center;
+	}
+
+	p.item_code_4_list{
+		display:				block;
+		padding-bottom:			0 !important;
+		padding:				5px 0;
+		text-align:				center !important;
+	}
+
+
+	p.sale_price ,
+	p.normal_price {
+		font-size:				1.4em;
+		text-align:				center !important;
+	}
+
+	.price01_default ,
+	.price02_default {
+		font-size:				1.4em;
+		font-weight:			bold !important;
+	}
+	.price01_default{font-color:	#274aa1 !important;}
+	.price02_default{font-color:	crimson !important;}
+
+	.small{
+		font-size:				0.8em;
+		font-weight:			normal !important;
+	}
+
+
+	div.product_tag{
+		display:				block;
+		padding:				5px 10px !important;
+	}
+	div.cart_block{
+		display:				block;
+		margin-left:			auto;
+		margin-right:			auto;
+		width:					300px;
+	}
+
+	select.form-control{
+		width:						90% !important;
+		max-width:					280px !important;
+	}
+
+	button.btn-block{
+		width:						90% !important;
+		max-width:					280px !important;
+
+	}
+
+
+	.wxlogo	{	width:			240px;}
+	p.front {
+		display:			block;
+		padding-top:		20px;
+		padding-bottom:		20px important;
+		min-height:			48px;
+	}
+	.wxtext	{
+		width:				80%;
+		max-width:			720px;
+	}
+
+	div.wxbtn{
+		display:			block;
+		width:				900px;
+		margin:				0 auto !important;
+	}
+
+	@media (min-width:	992px) {
+		img.ww180{
+			width:				100% !important;
+			height:				auto;
+		}
+		.wxlogo	{
+			padding-top:		30px;
+		}
+	}
+	@media (max-width:	991px) {
+		div.wxbtn{	width:	540px !important;}
+
+		img.ww180{
+			width:				178px !important;
+			height:				auto;
+		}
+	}
+
+	}
+	@media (max-width:	767px) {
+		div.wxbtn{	width:	540px !important;}
+	}
+	@media (max-width:	540px) {
+		div.wxbtn{	width:	360px !important;}
+	}
+
+
+
+	ul.b5 li {width:	20%;	}
+	ul.b3 li {width:	31.3%; margin-left:1%;	}
+
+	@media (min-width:	768px) {
+		ul.b4 li {width:	25%;		}
+		ul.b5 li {width:	20%;		}
+	}
+
+	@media (max-width:	767px) {
+		ul.b4 li {width:	33.3%;		}
+		ul.b5 li {width:	33.3%;		}
+	}
+
+	@media (max-width:	480px) {
+		ul.b3 li {width:	100%;		}
+		ul.b4 li {width:	50%;		}
+		ul.b5 li {width:	50%;		}
+	}
+
+	a span.all_list_no {
+		color: #0062ac !important;
+		text-decoration: none;
+		cursor: pointer;
+		padding-left:10px;
+		padding-right:10px;
+		font-weight:normal !important;
+	}
+
+	a span.all_list_name {
+		text-decoration: none;
+		cursor: pointer;
+		padding-left:7px;
+		padding-right:7px;
+	}
+
+	div.wMenu	{	width:	810px; display:block;;}
+	div.wLogo	{	width:	150px; display:block;}
+
+	@media (min-width:	768px) {
+		a.detail{
+			display:				block;
+			padding:				5px 0;
+			margin:					5px 2px;
+			text-align:				center;
+			color:					#473328;
+			background-color:		transparent;
+		}
+	}
+	@media (max-width:	767px) {
+		a.detail{
+			display:				block;
+			width:					120px;
+			padding:				15px 0;
+			margin:					2px 2px;
+			text-align:				center;
+			color:					#473328 !important;
+			background-color:		#fff;
+			font-weight:			900;
+			border:					1px solid #473328;
+		}
+	}
+
+
+div.midashi{display: block;background-color: #F6EADD; background-image: url(http://dresstokyo.com/wp/wp-content/uploads/thecontent_main_bg.png);margin:0 0 0 0;padding:10px 15px;border: 5px solid #fff;}
+.midashi h1 {color: #383838;display: block;margin-bottom: 10px;text-align: center;font-size: 18px;}
+.midashi h2 {color: #383838;display: block;background-image: url(http://dresstokyo.com/wp/wp-content/uploads/thecontent_title.png);background-repeat: no-repeat !important;background-position: center bottom;margin-bottom: 10px;text-align: center;font-size: 18px;font-weight: bold !important;height: 56px;}
+
